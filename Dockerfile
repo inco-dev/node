@@ -12,7 +12,7 @@ RUN ["mvn", "dependency:resolve"]
 RUN ["mvn", "verify"]
 RUN ["mvn", "package"]
 
-ADD target/*.jar /inco/jar/inco.jar
+ADD target/inco-node.jar /inco/
 
-CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "inco/jar/inco.jar"]
+CMD ["/usr/lib/jvm/java-8-openjdk-amd64/bin/java", "-jar", "inco/inco-node.jar"]
 
